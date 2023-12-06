@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+  </head>
+  <body>
+    <div>
+      <span>span1</span>
+      <span>span2</span>
+      <span>span3</span>
+    </div>
+    <div>
+      <p class="myclass">Lorem ipsum dolor sit amet.</p>
+      <p class="myclass">Lorem ipsum dolor sit amet.</p>
+      <p class="myclass">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div>
+      <h1 class="myclass">Lorem ipsum dolor sit amet.</h1>
+      <h1 class="myclass">Lorem ipsum dolor sit amet.</h1>
+      <h1 class="myclass">Lorem ipsum dolor sit amet.</h1>
+    </div>
+    <ul>
+      <li>
+        my list
+        <ul>
+          <li>list1</li>
+          <li>list2</li>
+          <li>list3</li>
+          <li>list4</li>
+          <li>list5</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        my list
+        <ul>
+          <li>list1</li>
+          <li class="note">list2</li>
+          <li class="note">list3</li>
+          <li>list4</li>
+          <li>list5</li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      $("div>span").css("color", "blue").css("fontSize", "20px");
+      $(".myclass").css("background-color", "red");
+      $("ul li ul li:eq(0)").css("color", "green");
+      $("ul li ul li:eq(4)").css("color", "blue");
+      $("ul li ul li:eq(3)").css("color", "orange");
+      $("ul li ul>li").css("fontSize", "20px");
+      //   $("ul:last").css("background-color", "green");
+      $("ul:last li").not(".note").css("color", "orange");
+    </script>
+  </body>
+</html>
